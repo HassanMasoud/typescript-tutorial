@@ -1,2 +1,4 @@
-var character = 'hassan';
-console.log(character);
+var circ = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circ(7.5));
