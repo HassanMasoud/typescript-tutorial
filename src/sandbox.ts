@@ -63,3 +63,5 @@ let object: { name: any; age: any }
 object = { name: 'Alice', age: 20 }
 object = { name: true, age: 'hello' }
 console.log(object)
+
+console.log('from the src folder')
