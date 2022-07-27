@@ -44,3 +44,22 @@ person2 = {
 }
 
 console.log(person1, person2)
+
+// any type
+let years: any = 25
+console.log(years)
+years = true
+console.log(years)
+years = 'hello'
+console.log(years)
+
+let mixedArray: any[] = []
+mixedArray.push('hello')
+mixedArray.push(true)
+mixedArray.push(34)
+console.log(mixedArray)
+
+let object: { name: any; age: any }
+object = { name: 'Alice', age: 20 }
+object = { name: true, age: 'hello' }
+console.log(object)
