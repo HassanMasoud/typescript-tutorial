@@ -86,11 +86,35 @@
 // let result = minus(10, 7)
 // console.log(result)
 
-type strOrNum = string | number
-type objWithName = { name: string; uid: strOrNum }
+//Type aliases
+// type strOrNum = string | number
+// type objWithName = { name: string; uid: strOrNum }
 
-const greet = (user: objWithName) => {
-  console.log(`${user.name} says hello!`)
+// const greet = (user: objWithName) => {
+//   console.log(`${user.name} says hello!`)
+// }
+
+// greet({ name: 'Hassan', uid: 1 })
+
+//Function signatures
+let greet: (a: string, b: string) => void
+greet = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting}`)
 }
 
-greet({ name: 'Hassan', uid: 1 })
+let calc: (a: number, b: number, c: string) => number
+calc = (numOne: number, numTwo: number, action: string) => {
+  if (action === 'add') {
+    return numOne + numTwo
+  } else {
+    return numOne - numTwo
+  }
+}
+
+type person = { name: string; age: number }
+let logDetails: (obj: person) => void
+logDetails = (human: person) => {
+  console.log(`The human called ${human.name} is ${human.age}`)
+}
+
+logDetails({ name: 'Alex', age: 23 })
