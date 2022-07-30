@@ -66,22 +66,31 @@
 
 // console.log('from the src folder')
 
-let greet: Function
+// let greet: Function
 
-greet = () => {
-  console.log('Hello, world')
+// greet = () => {
+//   console.log('Hello, world')
+// }
+
+// let add = (a: number, b: number, c: number | string = 10): void => {
+//   console.log(a + b)
+//   console.log(c)
+// }
+
+// add(5, 10, '20')
+
+// let minus = (a: number, b: number): number => {
+//   return a - b
+// }
+
+// let result = minus(10, 7)
+// console.log(result)
+
+type strOrNum = string | number
+type objWithName = { name: string; uid: strOrNum }
+
+const greet = (user: objWithName) => {
+  console.log(`${user.name} says hello!`)
 }
 
-let add = (a: number, b: number, c: number | string = 10): void => {
-  console.log(a + b)
-  console.log(c)
-}
-
-add(5, 10, '20')
-
-let minus = (a: number, b: number): number => {
-  return a - b
-}
-
-let result = minus(10, 7)
-console.log(result)
+greet({ name: 'Hassan', uid: 1 })
