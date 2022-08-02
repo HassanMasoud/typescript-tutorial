@@ -97,24 +97,24 @@
 // greet({ name: 'Hassan', uid: 1 })
 
 //Function signatures
-let greet: (a: string, b: string) => void
-greet = (name: string, greeting: string) => {
-  console.log(`${name} says ${greeting}`)
-}
+// let greet: (a: string, b: string) => void
+// greet = (name: string, greeting: string) => {
+//   console.log(`${name} says ${greeting}`)
+// }
 
-let calc: (a: number, b: number, c: string) => number
-calc = (numOne: number, numTwo: number, action: string) => {
-  if (action === 'add') {
-    return numOne + numTwo
-  } else {
-    return numOne - numTwo
-  }
-}
+// let calc: (a: number, b: number, c: string) => number
+// calc = (numOne: number, numTwo: number, action: string) => {
+//   if (action === 'add') {
+//     return numOne + numTwo
+//   } else {
+//     return numOne - numTwo
+//   }
+// }
 
-type person = { name: string; age: number }
-let logDetails: (obj: person) => void
-logDetails = (human: person) => {
-  console.log(`The human called ${human.name} is ${human.age}`)
-}
+// type person = { name: string; age: number }
+// let logDetails: (obj: person) => void
+// logDetails = (human: person) => {
+//   console.log(`The human called ${human.name} is ${human.age}`)
+// }
 
-logDetails({ name: 'Alex', age: 23 })
+// logDetails({ name: 'Alex', age: 23 })
