@@ -57,3 +57,21 @@ form.addEventListener('submit', (e) => {
 //   console.log('Hello', person.name)
 // }
 // greetPerson(me)
+//Generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let obj = addUID({ name: 'Hassan', age: 28 });
+console.log(obj);
+const docThree = {
+    uid: 1,
+    resourceName: 'person',
+    data: 'alex',
+};
+const docFour = {
+    uid: 2,
+    resourceName: 'shopping list',
+    data: ['milk', 'bread', 'eggs'],
+};
+console.log(docThree, docFour);
