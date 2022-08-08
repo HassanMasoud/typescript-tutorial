@@ -84,22 +84,30 @@ const addUID = <T extends { name: string }>(obj: T) => {
 let obj = addUID({ name: 'Hassan', age: 28 })
 console.log(obj)
 
+enum ResourceType {
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
+}
+
 interface Resource<T> {
   uid: number
-  resourceName: string
+  resourceType: ResourceType
   data: T
 }
 
-const docThree: Resource<string> = {
+const docThree: Resource<object> = {
   uid: 1,
-  resourceName: 'person',
-  data: 'alex',
+  resourceType: ResourceType.BOOK,
+  data: { title: 'name of the wind' },
 }
 
-const docFour: Resource<string[]> = {
+const docFour: Resource<object> = {
   uid: 2,
-  resourceName: 'shopping list',
-  data: ['milk', 'bread', 'eggs'],
+  resourceType: ResourceType.PERSON,
+  data: { name: 'Hassan' },
 }
 
 console.log(docThree, docFour)
